@@ -1,12 +1,12 @@
 
 import React, { Component } from 'react'
-
+import Todoadder from './components/todoadder'
 class App extends Component {
    render() {
        return (
-           <div>
-               hello man
-           </div>
+           <React.Fragment>
+               <Todoadder />
+           </React.Fragment>
        )
    }
 }
