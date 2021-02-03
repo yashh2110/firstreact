@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Todo from './todo';
+import Wrapper from './High';
 class Todoadder extends Component {
     constructor(){
         super();
@@ -29,13 +30,14 @@ class Todoadder extends Component {
         }))
     }
     render() {
+        const {name,onMouseOver} = this.props;
         return (
             <div>
                 <input type="text" onChange={this.onChange} value={this.state.text}></input>
-                <button onClick={this.addItem} type="submit">add</button>
+                <button onClick={this.addItem} onMouseOver={onMouseOver} type="submit">{name} add</button>
                 <Todo items={this.state.items}/>
             </div>
         )
     }
 }
-export default Todoadder
+export default Wrapper(Todoadder);
