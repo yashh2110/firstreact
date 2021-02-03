@@ -4,7 +4,7 @@ function Inputmap({array}) {
     return (
         <React.Fragment>
             {array.map((e)=>(
-                <div id={e.id}>{e.element}</div>
+                <div key={e.id}>{e.element}</div>
             ))}
         </React.Fragment>
     )
